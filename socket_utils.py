@@ -116,7 +116,6 @@ def send_ping(skt, destination, p_id, seq_num, pkt_size):
         skt.sendto(pkt, (destination, 1))
     except error as err:
         print("Socket Failure (%s)" % (err.args[1]))
-        # TODO: report the error and exit the program
 
     return time.time()
 
